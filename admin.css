@@ -23,7 +23,7 @@ body {
     border-radius: 0.5rem;
 }
 
-#addButton{
+#addButton {
     display: flex;
     background-color: #c8392b;
     border: none;
@@ -165,8 +165,4 @@ td {
     padding: 8px;
     border-radius: 0.3rem;
     border: 1px solid #c8c8c8;
-}
-
-#editButton{
-    
 }

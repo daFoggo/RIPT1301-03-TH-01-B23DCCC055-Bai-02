@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+
+#addButton {
+    display: flex;
+    background-color: #c8392b;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+#studentTable {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #c8c8c8;
+    border-collapse: collapse;
+}
+
+#studentTable th,
+td {
+    border: 1px solid #c8c8c8;
+    padding: 10px;
+}
+
+#studentTable th {
+    background-color: #f0f2f5;
+}
+
+.btn {
+    background-color: #0259a0;
+    padding: 8px 24px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .65);
+    display: none;
+}
+
+#control-modal:checked~.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fade .6s forwards;
+    opacity: 0;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: white;
+    width: 512px;
+    border-radius: 0.3rem;
+}
+
+.modal-header {
+    margin-bottom: 15px;
+}
+
+.modal-close {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 12px 24px 24px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+
+.modal-footer{
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modalButton{
+    padding: 8px 24px;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.save{
+    background-color: #c8392b;
+    color: white;
+}
+
+.inputform{
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputform input{
+    margin-left: 20px;
+    width: 75%;
+    padding: 8px;
+    border-radius: 0.3rem;
+    border: 1px solid #c8c8c8;
+}
+
+.editStudent, .deleteStudent{
+    cursor: pointer;
+}

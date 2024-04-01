@@ -23,7 +23,7 @@ body {
     border-radius: 0.5rem;
 }
 
-#addButton {
+#addButton{
     display: flex;
     background-color: #c8392b;
     border: none;
@@ -53,14 +53,6 @@ td {
 
 #studentTable th {
     background-color: #f0f2f5;
-}
-
-.btn {
-    background-color: #0259a0;
-    padding: 8px 24px;
-    border-radius: 3px;
-    color: white;
-    cursor: pointer;
 }
 
 .modal {
@@ -141,33 +133,33 @@ td {
 }
 
 
-.modal-footer{
+.modal-footer {
     margin-top: 15px;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
 }
 
-.modalButton{
+.modalButton {
     padding: 8px 24px;
     border-radius: 0.3rem;
     border: none;
     cursor: pointer;
 }
 
-.save{
+.save {
     background-color: #c8392b;
     color: white;
 }
 
-.inputform{
+.inputform {
     display: flex;
     margin-bottom: 15px;
     align-items: center;
     justify-content: space-between;
 }
 
-.inputform input{
+.inputform input {
     margin-left: 20px;
     width: 75%;
     padding: 8px;
@@ -175,6 +167,6 @@ td {
     border: 1px solid #c8c8c8;
 }
 
-.editStudent, .deleteStudent{
-    cursor: pointer;
+#editButton{
+    
 }

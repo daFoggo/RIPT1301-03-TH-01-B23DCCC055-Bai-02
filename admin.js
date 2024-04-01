@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function showModal() {
+    function showAddModal() {
         let addModal = document.getElementById("addModal");
         addModal.style.display = "block";
     }
 
-    let btn = document.getElementById("addButton");
-    let span = document.getElementsByClassName("close")[0];
+    let addBtn = document.getElementById("addButton");
+    let addSpan = document.getElementsByClassName("close")[0];
 
-    btn.onclick = showModal;
+    addBtn.onclick = showAddModal;
 
-    span.onclick = function () {
+    addSpan.onclick = function () {
         let addModal = document.getElementById("addModal");
         addModal.style.display = "none";
     };
@@ -48,11 +48,16 @@ document.addEventListener("DOMContentLoaded", function () {
         renderStudentTable();
     });
 
-    
+
 
     const studentTable = document.getElementById("studentTable");
 
     function renderStudentTable() {
+        const firstRow = studentTable.querySelector('tr:first-child');
+
+        studentTable.innerHTML = '';
+        studentTable.appendChild(firstRow);
+
         studentData.forEach((student, index) => {
             const row = document.createElement("tr");
 
@@ -97,6 +102,10 @@ document.addEventListener("DOMContentLoaded", function () {
           </svg>`;
             editIcon.classList.add("bi", "bi-pencil", "editStudent");
             deleteIcon.classList.add("bi", "bi-trash", "deleteStudent");
+            deleteIcon.addEventListener("click", function () {
+                studentData.splice(index, 1);
+                row.remove();
+            });
             td8.appendChild(editIcon);
             td8.appendChild(deleteIcon);
             row.appendChild(td8);
